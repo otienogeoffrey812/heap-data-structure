@@ -1,7 +1,7 @@
 package com.artman;
 
 public class Heap {
-    private int[] items = new int[10];
+    private int[] items = new int[100];
     private int size;
     public void insert(int value){
         if (isFull()) throw new IllegalStateException();
@@ -14,8 +14,10 @@ public class Heap {
             index = parent(index);
         }
     }
-    public void remove(){
+    public int remove(){
         if (isEmpty()) throw new IllegalStateException();
+
+        var removedItem = items[0];
 
         items[0] = items[--size];
         var index = 0;
@@ -24,6 +26,15 @@ public class Heap {
             var largerChildIndex = largerChildIndex(index);
             swap(index, largerChildIndex);
             index = largerChildIndex;
+        }
+        return removedItem;
+    }
+    public  void heapSort(int[] numbers){
+        for (var num: numbers){
+            insert(num);
+        }
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            numbers[i] = remove();
         }
     }
     private boolean isValidParent(int index){

@@ -12,6 +12,7 @@ The repository provides the following key operations:
 
 - Insertion
 - Removal
+- Heap Sort
 
 ## Contributing
 
