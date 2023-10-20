@@ -1,7 +1,7 @@
 package com.artman;
 
 public class Heap {
-    private int[] items = new int[100];
+    private int[] items = new int[10];
     private int size;
     public void insert(int value){
         if (isFull()) throw new IllegalStateException();
