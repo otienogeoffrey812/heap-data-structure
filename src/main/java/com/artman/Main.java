@@ -27,8 +27,7 @@ public class Main {
 //        queue.dequeue();
 
         int[] arrays = {5, 3, 10, 1, 4, 2};
-        System.out.println(Arrays.toString(arrays));
-        MaxHeap.heapify(arrays);
-        System.out.println(Arrays.toString(arrays));
+        MaxHeap.getKthLargest(arrays,2);
+        System.out.println(MaxHeap.getKthLargest(arrays,6));
     }
 }

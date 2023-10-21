@@ -88,4 +88,9 @@ public class Heap {
         items[first] = items[second];
         items[second] = temp;
     }
+
+    public int max(){
+        if (size == 0) throw new IllegalArgumentException();
+        return items[0];
+    }
 }
