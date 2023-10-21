@@ -14,6 +14,7 @@ The repository provides the following key operations:
 - Removal
 - Heap Sort
 - Priority Queue
+- Heapify
 
 ## Contributing
 

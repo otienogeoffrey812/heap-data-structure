@@ -1,7 +1,7 @@
 package com.artman;
 
 public class PriorityQueue {
-    private Heap heap = new Heap();
+    private final Heap heap = new Heap();
     public void enqueue(int item){
         heap.insert(item);
     }
